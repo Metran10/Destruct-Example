@@ -10,10 +10,16 @@ public class CubeNetworked : NetworkBehaviour
 
     MeshFilter meshFilter;
 
+    [Networked]
+    public TickTimer lifetime { get; set; }
+
 
     public override void FixedUpdateNetwork()
     {
-        
+        if (lifetime.ExpiredOrNotRunning(Runner))
+        {
+            Runner.Despawn(Object);
+        }
     }
 
     public override void Spawned()
@@ -26,49 +32,13 @@ public class CubeNetworked : NetworkBehaviour
         {
             //Debug.Log("Spawned executed on client");
         }
+        lifetime = TickTimer.CreateFromSeconds(Runner, 5.0f);
+
 
         isInitialized = false;
 
         isInitialized = true;
-        /*
-
-        meshFilter = GetComponent<MeshFilter>();
-        Debug.Log("Spawning cube spawneeed");
-
-        Vector3[] vertices = new Vector3[] {new Vector3(0,0,0),new Vector3(2,0,0),
-            new Vector3(2,2,0), new Vector3(0,2,0),
-            new Vector3(0,2,2), new Vector3(2,2,2),
-            new Vector3(2,0,2), new Vector3(0,0,2)
-        };
-        Vector2[] UV = new Vector2[] { new Vector2(0, 0), new Vector2(1, 0), new Vector2(0, 1), new Vector2(1, 1) };
-        int[] trianagles = new int[] { 0,2,1,
-            0,3,2,
-            2,3,4,
-            2,4,5,
-            1,2,5,
-            1,5,6,
-            0,7,4,
-            0,4,3,
-            5,4,7,
-            5,7,6,
-            0,6,7,
-            0,1,6};
-        Vector3[] normals = new Vector3[] { -Vector3.forward, -Vector3.forward, -Vector3.forward, -Vector3.forward };
-
-        var mesh = new Mesh();
-
-        mesh.vertices = vertices;
-        mesh.triangles = trianagles;
-        mesh.Optimize();
-        mesh.RecalculateNormals();
-
-        gameObject.AddComponent<Rigidbody>();
-        gameObject.AddComponent<NetworkRigidbody>();
-        gameObject.AddComponent<BoxCollider>();
-
-        gameObject.GetComponent<NetworkRigidbody>().InterpolationTarget = transform;
-
-        */
+        
     }
 
 
@@ -137,9 +107,15 @@ public class CubeNetworked : NetworkBehaviour
         {
             Debug.Log("initializeMesh executed on client");
         }
+        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+       
+        //Debug.Log($"Obiekt: {Object.transform.position}");
+        //Debug.Log($"meshFilter: {meshFilter.transform.position}");
+        //Debug.Log($"meshRenderer: {meshRenderer.transform.position}");
 
+        GetComponent<NetworkTransform>().InterpolationTarget = this.transform;
 
-        //gameObject.GetComponent<NetworkRigidbody>().InterpolationTarget = transform;
+        
     }
 
     

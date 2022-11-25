@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4619561115911191737}
   - component: {fileID: 1852195036631797944}
   - component: {fileID: 1565608086}
+  - component: {fileID: 4935574141085691939}
   m_Layer: 0
   m_Name: NetworkedCube
   m_TagString: Untagged
@@ -57,6 +58,7 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 1565608086}
+  - {fileID: 4935574141085691939}
   SimulationBehaviours: []
 --- !u!33 &4619561115911191737
 MeshFilter:
@@ -120,3 +122,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
+  _isInitialized: 0
+--- !u!114 &4935574141085691939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3133796600803422869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  InterpolationSpace: 0
+  InterpolationTarget: {fileID: 0}
+  InterpolateErrorCorrection: 1
+  InterpolatedErrorCorrectionSettings:
+    MinRate: 3.3
+    MaxRate: 10
+    PosBlendStart: 0.25
+    PosBlendEnd: 1
+    PosMinCorrection: 0.025
+    PosTeleportDistance: 2
+    RotBlendStart: 0.1
+    RotBlendEnd: 0.5
+    RotTeleportRadians: 1.5
