@@ -31,6 +31,24 @@ public class Missile : NetworkBehaviour
         {
             //Debug.Log("HIT");
             hit = true;
+
+
+
+            if(collision.gameObject.GetComponent<IDestructible>() != null)
+            {
+                NetworkDestructible ob = collision.gameObject.GetComponent<NetworkDestructible>();
+                ob.hitPosition = this.transform.position;
+
+                ob.OnDestruction();
+
+
+                Debug.Log("Hit destructible network object");
+
+
+
+
+            }
+
         }
         
     }
