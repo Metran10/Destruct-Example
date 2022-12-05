@@ -7,7 +7,7 @@ public interface IDestructible
 {
     void PreDestruct();
 
-    void PostDestruct((SplitResult, List<GameObject>) destructionResults);
+    void PostDestruct((SplitResult, List<SplitResult>) destructionResults);
 
     MeshFilter GetMeshFilter();
 }

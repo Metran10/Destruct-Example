@@ -32,7 +32,7 @@ public class CubeNetworked : NetworkBehaviour
         {
             //Debug.Log("Spawned executed on client");
         }
-        lifetime = TickTimer.CreateFromSeconds(Runner, 5.0f);
+        lifetime = TickTimer.CreateFromSeconds(Runner, 20.0f);
 
 
         isInitialized = false;
@@ -44,7 +44,7 @@ public class CubeNetworked : NetworkBehaviour
 
     public static void OnInitializeCube(Changed<CubeNetworked> changed)
     {
-        Debug.Log("On cube initialize");
+        Debug.Log("On cube initialize   (on changeee)");
         bool isInitializedCurrently = changed.Behaviour.isInitialized;
 
         changed.LoadOld();

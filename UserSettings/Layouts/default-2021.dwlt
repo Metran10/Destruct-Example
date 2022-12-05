@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: GitHub
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 503, y: 321}
-  m_MaxSize: {x: 16192, y: 12117}
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 56
+  controlID: 107
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,9 +64,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1465
+    x: 1451
     y: 0
-    width: 455
+    width: 469
     height: 947
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
@@ -93,10 +93,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 279
-    height: 693
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 311
+    height: 525
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -112,23 +112,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 693
-    width: 1465
-    height: 254
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 13}
+    y: 525
+    width: 1451
+    height: 422
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,12 +219,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1465
+    width: 1451
     height: 947
-  m_MinSize: {x: 403, y: 321}
-  m_MaxSize: {x: 8096, y: 12117}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 62
+  controlID: 16
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,12 +244,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1465
-    height: 693
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+    width: 1451
+    height: 525
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 63
+  controlID: 17
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -260,23 +260,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 279
+    x: 311
     y: 0
-    width: 1186
-    height: 693
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 16}
+    width: 1140
+    height: 525
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -297,15 +297,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1465
+    x: 1451
     y: 73
-    width: 454
+    width: 468
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  progressMessageClearTime: 4427.1509204
+  progressMessageClearTime: 34271.4052811
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
@@ -401,15 +401,41 @@ MonoBehaviour:
     currentStatusEntriesHasUpdate: 0
     currentLocksHasUpdate: 0
     commitBody: 
-    commitMessage: 
+    commitMessage: Working Destruction Synchronization
     currentBranch: '[master]'
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
         keys:
         - 00000000000000001000000000000000
+        - bd07209623118fc46a32850135be3f32
+        - 654be33bd44a76a4c8c180d1da6ad066
+        - 346d302ecc25a9a41b48b857ce51d873
+        - f4b327eab8d866e4087e166da8cafc09
+        - 8f5fec620d3bc9546a41a5b67cb9f8b6
+        - a31ea7d0315594440839cdb0db6bc411
+        - 8b14e706b1e7cb044b23837e8a70cad9
+        - bf2888ff90706904abc2d851c3e59e00
+        - 755e570bd21b39440a923056e60f1450
+        - 6148e48ed6b61d748b187d06d3687b83
+        - a041d83486c20b84bbf5077ddfbbca37
+        - 65daf17fbe5101b41977305639f30c65
+        - 11fdc6f78f8c965499a870ca06dca6bc
+        - 74a7aa389726f964ab34c52e208c2a43
+        - 894412a5b602e6c4ba2cf2d01f4f92b5
+        - 7191fa4bfa12ae749b27f73ed292eaf1
+        - 24641be1c0410a745b529e61b508679f
+        - ec8d3a1577179ef44815739178cf75b4
+        - d3453b3f1a20ea148b5028f8556a7be5
+        - d8fb344b9abf5274abd744833474b087
+        - a2a889c264e34b47a7349cbcb2cbedd7
+        - 894a6cc6ed5cd2645bb542978cbed6a9
+        - fa3f2fa6aced9b54b970c8996957df3b
+        - 9833b240625d4e14995c296b87e34b96
         - 4614a39645cd8a6458ad35d235d0524a
         - 563ccc76025c74440873469764550e57
+        - 050c37dd505b28c409eaddfc4dfaf0ee
+        - 45d0357407827084894efd8dd248ac13
         - e60c217995098f242a72fb9296a49a17
         - 9fc0d4010bbf28b4594072e72b8655ab
         - 6db69ae045bf60a49b6a5ddcf7365579
@@ -421,8 +447,8 @@ MonoBehaviour:
         - 56a6c2a1dcf10544ba91230103536af1
         - b4f76ea05dd060343a274fe4a73f7b86
         - f5ca24876e077204892ae74c1bc31244
-        - 0000000000000000f100000000000000
-        - 0000000000000000e100000000000000
+        - 839d462de0d3a0e4ba7e060e790d084f
+        - a196fd9a7bdf60f4b98bc636873d7ab3
         values:
         - path: Assets
           label: Assets
@@ -442,6 +468,456 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
+        - path: Assets\ParrelSync
+          label: ParrelSync
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\ParrelSync\Examples
+          label: Examples
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\ParrelSync\Examples\CustomArgumentExample.cs
+          label: CustomArgumentExample.cs
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\Examples\CustomArgumentExample.cs
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\Examples\CustomArgumentExample.cs
+            projectPath: Assets\ParrelSync\Examples\CustomArgumentExample.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\LICENSE.md
+          label: LICENSE.md
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\LICENSE.md
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\LICENSE.md
+            projectPath: Assets\ParrelSync\LICENSE.md
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync
+          label: ParrelSync
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\ParrelSync\ParrelSync\Editor
+          label: Editor
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock
+          label: AssetModBlock
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs
+          label: EditorQuit.cs
+          level: 5
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs
+            projectPath: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs
+          label: ParrelSyncAssetModificationProcessor.cs
+          level: 5
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs
+            projectPath: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs
+          label: ClonesManager.cs
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs
+            projectPath: Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs
+          label: ClonesManagerWindow.cs
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs
+            projectPath: Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs
+          label: ExternalLinks.cs
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs
+            projectPath: Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs
+          label: FileUtilities.cs
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs
+            projectPath: Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync\Editor\NonCore
+          label: NonCore
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs
+          label: AskFeedbackDialog.cs
+          level: 5
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs
+            projectPath: Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs
+          label: OtherMenuItem.cs
+          level: 5
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs
+            projectPath: Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync\Editor\Preferences.cs
+          label: Preferences.cs
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\Editor\Preferences.cs
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\Editor\Preferences.cs
+            projectPath: Assets\ParrelSync\ParrelSync\Editor\Preferences.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync\Editor\Project.cs
+          label: Project.cs
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\Editor\Project.cs
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\Editor\Project.cs
+            projectPath: Assets\ParrelSync\ParrelSync\Editor\Project.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs
+          label: UpdateChecker.cs
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs
+            projectPath: Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs
+          label: ValidateCopiedFoldersIntegrity.cs
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs
+            projectPath: Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync\package.json
+          label: package.json
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\package.json
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\package.json
+            projectPath: Assets\ParrelSync\ParrelSync\package.json
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\ParrelSync\projectCloner.asmdef
+          label: projectCloner.asmdef
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\ParrelSync\projectCloner.asmdef
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\ParrelSync\projectCloner.asmdef
+            projectPath: Assets\ParrelSync\ParrelSync\projectCloner.asmdef
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\README.md
+          label: README.md
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\README.md
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\README.md
+            projectPath: Assets\ParrelSync\README.md
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\ParrelSync\VERSION.txt
+          label: VERSION.txt
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\ParrelSync\VERSION.txt
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\ParrelSync\VERSION.txt
+            projectPath: Assets\ParrelSync\VERSION.txt
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
         - path: Assets\PreFabs
           label: PreFabs
           level: 1
@@ -464,7 +940,7 @@ MonoBehaviour:
           label: DestructibleCube.prefab
           level: 2
           isFolder: 0
-          isContainer: 1
+          isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -476,6 +952,44 @@ MonoBehaviour:
             fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
               Example\Assets\PreFabs\DestructibleCube.prefab
             projectPath: Assets\PreFabs\DestructibleCube.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\PreFabs\Missile.prefab
+          label: Missile.prefab
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\PreFabs\Missile.prefab
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\PreFabs\Missile.prefab
+            projectPath: Assets\PreFabs\Missile.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\PreFabs\NetworkedDestructFragment.prefab
+          label: NetworkedDestructFragment.prefab
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\PreFabs\NetworkedDestructFragment.prefab
+            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+              Example\Assets\PreFabs\NetworkedDestructFragment.prefab
+            projectPath: Assets\PreFabs\NetworkedDestructFragment.prefab
             originalPath: 
             indexStatus: 1
             workTreeStatus: 1
@@ -556,7 +1070,7 @@ MonoBehaviour:
           label: BasicDestructible.cs
           level: 3
           isFolder: 0
-          isContainer: 1
+          isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -569,13 +1083,13 @@ MonoBehaviour:
               Example\Assets\Scripts\Destruction\BasicDestructible.cs
             projectPath: Assets\Scripts\Destruction\BasicDestructible.cs
             originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
+            indexStatus: 0
+            workTreeStatus: 3
         - path: Assets\Scripts\Destruction\Destruct.cs
           label: Destruct.cs
           level: 3
           isFolder: 0
-          isContainer: 1
+          isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -588,13 +1102,13 @@ MonoBehaviour:
               Example\Assets\Scripts\Destruction\Destruct.cs
             projectPath: Assets\Scripts\Destruction\Destruct.cs
             originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
+            indexStatus: 0
+            workTreeStatus: 3
         - path: Assets\Scripts\Destruction\IDestructible.cs
           label: IDestructible.cs
           level: 3
           isFolder: 0
-          isContainer: 1
+          isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -607,13 +1121,13 @@ MonoBehaviour:
               Example\Assets\Scripts\Destruction\IDestructible.cs
             projectPath: Assets\Scripts\Destruction\IDestructible.cs
             originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
+            indexStatus: 0
+            workTreeStatus: 3
         - path: Assets\Scripts\Destruction\NetworkDestructFragment.cs
           label: NetworkDestructFragment.cs
           level: 3
           isFolder: 0
-          isContainer: 1
+          isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -626,13 +1140,13 @@ MonoBehaviour:
               Example\Assets\Scripts\Destruction\NetworkDestructFragment.cs
             projectPath: Assets\Scripts\Destruction\NetworkDestructFragment.cs
             originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
+            indexStatus: 0
+            workTreeStatus: 3
         - path: Assets\Scripts\Destruction\NetworkDestructible.cs
           label: NetworkDestructible.cs
           level: 3
           isFolder: 0
-          isContainer: 1
+          isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -645,8 +1159,8 @@ MonoBehaviour:
               Example\Assets\Scripts\Destruction\NetworkDestructible.cs
             projectPath: Assets\Scripts\Destruction\NetworkDestructible.cs
             originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
+            indexStatus: 0
+            workTreeStatus: 3
         - path: Assets\Scripts\PlayerControls
           label: PlayerControls
           level: 2
@@ -684,10 +1198,10 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
-        - path: ProjectSettings\MemorySettings.asset
-          label: MemorySettings.asset
-          level: 1
-          isFolder: 0
+        - path: Assets\Scripts\Spawning
+          label: Spawning
+          level: 2
+          isFolder: 1
           isContainer: 0
           isCollapsed: 0
           isHidden: 0
@@ -696,16 +1210,15 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: ProjectSettings\MemorySettings.asset
-            fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-              Example\ProjectSettings\MemorySettings.asset
-            projectPath: ProjectSettings\MemorySettings.asset
+            path: 
+            fullPath: 
+            projectPath: 
             originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings\ProjectVersion.txt
-          label: ProjectVersion.txt
-          level: 1
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Spawning\CubeNetworked.cs
+          label: CubeNetworked.cs
+          level: 3
           isFolder: 0
           isContainer: 0
           isCollapsed: 0
@@ -715,29 +1228,142 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: ProjectSettings\ProjectVersion.txt
+            path: Assets\Scripts\Spawning\CubeNetworked.cs
             fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-              Example\ProjectSettings\ProjectVersion.txt
-            projectPath: ProjectSettings\ProjectVersion.txt
+              Example\Assets\Scripts\Spawning\CubeNetworked.cs
+            projectPath: Assets\Scripts\Spawning\CubeNetworked.cs
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
       folders:
         keys:
         - Assets
+        - Assets\ParrelSync
+        - Assets\ParrelSync\Examples
+        - Assets\ParrelSync\ParrelSync
+        - Assets\ParrelSync\ParrelSync\Editor
+        - Assets\ParrelSync\ParrelSync\Editor\AssetModBlock
+        - Assets\ParrelSync\ParrelSync\Editor\NonCore
         - Assets\PreFabs
         - Assets\Scenes
         - Assets\Scripts
         - Assets\Scripts\Destruction
         - Assets\Scripts\PlayerControls
-        - Packages
-        - ProjectSettings
+        - Assets\Scripts\Spawning
         - UserSettings
         - UserSettings\Layouts
         values:
         - path: Assets
           label: Assets
           level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\ParrelSync
+          label: ParrelSync
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\ParrelSync\Examples
+          label: Examples
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\ParrelSync\ParrelSync
+          label: ParrelSync
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\ParrelSync\ParrelSync\Editor
+          label: Editor
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock
+          label: AssetModBlock
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\ParrelSync\ParrelSync\Editor\NonCore
+          label: NonCore
+          level: 4
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -843,27 +1469,9 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Packages
-          label: Packages
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: ProjectSettings
-          label: ProjectSettings
-          level: 0
+        - path: Assets\Scripts\Spawning
+          label: Spawning
+          level: 2
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -961,6 +1569,912 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets\ParrelSync.meta
+        label: ParrelSync.meta
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync.meta
+          projectPath: Assets\ParrelSync.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync
+        label: ParrelSync
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\ParrelSync\Examples.meta
+        label: Examples.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\Examples.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\Examples.meta
+          projectPath: Assets\ParrelSync\Examples.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\Examples
+        label: Examples
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\ParrelSync\Examples\CustomArgumentExample.cs
+        label: CustomArgumentExample.cs
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\Examples\CustomArgumentExample.cs
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\Examples\CustomArgumentExample.cs
+          projectPath: Assets\ParrelSync\Examples\CustomArgumentExample.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\Examples\CustomArgumentExample.cs.meta
+        label: CustomArgumentExample.cs.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\Examples\CustomArgumentExample.cs.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\Examples\CustomArgumentExample.cs.meta
+          projectPath: Assets\ParrelSync\Examples\CustomArgumentExample.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\LICENSE.md
+        label: LICENSE.md
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\LICENSE.md
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\LICENSE.md
+          projectPath: Assets\ParrelSync\LICENSE.md
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\LICENSE.md.meta
+        label: LICENSE.md.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\LICENSE.md.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\LICENSE.md.meta
+          projectPath: Assets\ParrelSync\LICENSE.md.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync.meta
+        label: ParrelSync.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync.meta
+          projectPath: Assets\ParrelSync\ParrelSync.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync
+        label: ParrelSync
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\ParrelSync\ParrelSync\Editor.meta
+        label: Editor.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor
+        label: Editor
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock.meta
+        label: AssetModBlock.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\AssetModBlock.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock
+        label: AssetModBlock
+        level: 4
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs
+        label: EditorQuit.cs
+        level: 5
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs.meta
+        label: EditorQuit.cs.meta
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs
+        label: ParrelSyncAssetModificationProcessor.cs
+        level: 5
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs.meta
+        label: ParrelSyncAssetModificationProcessor.cs.meta
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs
+        label: ClonesManager.cs
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs.meta
+        label: ClonesManager.cs.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs
+        label: ClonesManagerWindow.cs
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs.meta
+        label: ClonesManagerWindow.cs.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs
+        label: ExternalLinks.cs
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs.meta
+        label: ExternalLinks.cs.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs
+        label: FileUtilities.cs
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs.meta
+        label: FileUtilities.cs.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\NonCore.meta
+        label: NonCore.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\NonCore.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\NonCore.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\NonCore.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\NonCore
+        label: NonCore
+        level: 4
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs
+        label: AskFeedbackDialog.cs
+        level: 5
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs.meta
+        label: AskFeedbackDialog.cs.meta
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs
+        label: OtherMenuItem.cs
+        level: 5
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs.meta
+        label: OtherMenuItem.cs.meta
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\Preferences.cs
+        label: Preferences.cs
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\Preferences.cs
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\Preferences.cs
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\Preferences.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\Preferences.cs.meta
+        label: Preferences.cs.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\Preferences.cs.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\Preferences.cs.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\Preferences.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\Project.cs
+        label: Project.cs
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\Project.cs
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\Project.cs
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\Project.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\Project.cs.meta
+        label: Project.cs.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\Project.cs.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\Project.cs.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\Project.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs
+        label: UpdateChecker.cs
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs.meta
+        label: UpdateChecker.cs.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs
+        label: ValidateCopiedFoldersIntegrity.cs
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs.meta
+        label: ValidateCopiedFoldersIntegrity.cs.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs.meta
+          projectPath: Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\package.json
+        label: package.json
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\package.json
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\package.json
+          projectPath: Assets\ParrelSync\ParrelSync\package.json
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\package.json.meta
+        label: package.json.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\package.json.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\package.json.meta
+          projectPath: Assets\ParrelSync\ParrelSync\package.json.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\projectCloner.asmdef
+        label: projectCloner.asmdef
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\projectCloner.asmdef
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\projectCloner.asmdef
+          projectPath: Assets\ParrelSync\ParrelSync\projectCloner.asmdef
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\ParrelSync\projectCloner.asmdef.meta
+        label: projectCloner.asmdef.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\ParrelSync\projectCloner.asmdef.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\ParrelSync\projectCloner.asmdef.meta
+          projectPath: Assets\ParrelSync\ParrelSync\projectCloner.asmdef.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\README.md
+        label: README.md
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\README.md
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\README.md
+          projectPath: Assets\ParrelSync\README.md
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\README.md.meta
+        label: README.md.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\README.md.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\README.md.meta
+          projectPath: Assets\ParrelSync\README.md.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\VERSION.txt
+        label: VERSION.txt
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\VERSION.txt
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\VERSION.txt
+          projectPath: Assets\ParrelSync\VERSION.txt
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\ParrelSync\VERSION.txt.meta
+        label: VERSION.txt.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ParrelSync\VERSION.txt.meta
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\ParrelSync\VERSION.txt.meta
+          projectPath: Assets\ParrelSync\VERSION.txt.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
       - path: Assets\PreFabs
         label: PreFabs
         level: 1
@@ -983,7 +2497,7 @@ MonoBehaviour:
         label: DestructibleCube.prefab
         level: 2
         isFolder: 0
-        isContainer: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -996,10 +2510,48 @@ MonoBehaviour:
             Example\Assets\PreFabs\DestructibleCube.prefab
           projectPath: Assets\PreFabs\DestructibleCube.prefab
           originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\PreFabs\Missile.prefab
+        label: Missile.prefab
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\PreFabs\Missile.prefab
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\PreFabs\Missile.prefab
+          projectPath: Assets\PreFabs\Missile.prefab
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\PreFabs\NetworkedDestructFragment.prefab
+        label: NetworkedDestructFragment.prefab
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\PreFabs\NetworkedDestructFragment.prefab
+          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
+            Example\Assets\PreFabs\NetworkedDestructFragment.prefab
+          projectPath: Assets\PreFabs\NetworkedDestructFragment.prefab
+          originalPath: 
           indexStatus: 1
           workTreeStatus: 1
-      - path: Assets\PreFabs\DestructibleCube.prefab.meta
-        label: DestructibleCube.prefab.meta
+      - path: Assets\PreFabs\NetworkedDestructFragment.prefab.meta
+        label: NetworkedDestructFragment.prefab.meta
         level: 3
         isFolder: 0
         isContainer: 0
@@ -1010,10 +2562,10 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\PreFabs\DestructibleCube.prefab.meta
+          path: Assets\PreFabs\NetworkedDestructFragment.prefab.meta
           fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-            Example\Assets\PreFabs\DestructibleCube.prefab.meta
-          projectPath: Assets\PreFabs\DestructibleCube.prefab.meta
+            Example\Assets\PreFabs\NetworkedDestructFragment.prefab.meta
+          projectPath: Assets\PreFabs\NetworkedDestructFragment.prefab.meta
           originalPath: 
           indexStatus: 1
           workTreeStatus: 1
@@ -1072,25 +2624,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scripts\Destruction.meta
-        label: Destruction.meta
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Destruction.meta
-          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-            Example\Assets\Scripts\Destruction.meta
-          projectPath: Assets\Scripts\Destruction.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
       - path: Assets\Scripts\Destruction
         label: Destruction
         level: 2
@@ -1113,7 +2646,7 @@ MonoBehaviour:
         label: BasicDestructible.cs
         level: 3
         isFolder: 0
-        isContainer: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -1126,32 +2659,13 @@ MonoBehaviour:
             Example\Assets\Scripts\Destruction\BasicDestructible.cs
           projectPath: Assets\Scripts\Destruction\BasicDestructible.cs
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Destruction\BasicDestructible.cs.meta
-        label: BasicDestructible.cs.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Destruction\BasicDestructible.cs.meta
-          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-            Example\Assets\Scripts\Destruction\BasicDestructible.cs.meta
-          projectPath: Assets\Scripts\Destruction\BasicDestructible.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets\Scripts\Destruction\Destruct.cs
         label: Destruct.cs
         level: 3
         isFolder: 0
-        isContainer: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -1164,32 +2678,13 @@ MonoBehaviour:
             Example\Assets\Scripts\Destruction\Destruct.cs
           projectPath: Assets\Scripts\Destruction\Destruct.cs
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Destruction\Destruct.cs.meta
-        label: Destruct.cs.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Destruction\Destruct.cs.meta
-          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-            Example\Assets\Scripts\Destruction\Destruct.cs.meta
-          projectPath: Assets\Scripts\Destruction\Destruct.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets\Scripts\Destruction\IDestructible.cs
         label: IDestructible.cs
         level: 3
         isFolder: 0
-        isContainer: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -1202,32 +2697,13 @@ MonoBehaviour:
             Example\Assets\Scripts\Destruction\IDestructible.cs
           projectPath: Assets\Scripts\Destruction\IDestructible.cs
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Destruction\IDestructible.cs.meta
-        label: IDestructible.cs.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Destruction\IDestructible.cs.meta
-          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-            Example\Assets\Scripts\Destruction\IDestructible.cs.meta
-          projectPath: Assets\Scripts\Destruction\IDestructible.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets\Scripts\Destruction\NetworkDestructFragment.cs
         label: NetworkDestructFragment.cs
         level: 3
         isFolder: 0
-        isContainer: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -1240,32 +2716,13 @@ MonoBehaviour:
             Example\Assets\Scripts\Destruction\NetworkDestructFragment.cs
           projectPath: Assets\Scripts\Destruction\NetworkDestructFragment.cs
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Destruction\NetworkDestructFragment.cs.meta
-        label: NetworkDestructFragment.cs.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Destruction\NetworkDestructFragment.cs.meta
-          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-            Example\Assets\Scripts\Destruction\NetworkDestructFragment.cs.meta
-          projectPath: Assets\Scripts\Destruction\NetworkDestructFragment.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets\Scripts\Destruction\NetworkDestructible.cs
         label: NetworkDestructible.cs
         level: 3
         isFolder: 0
-        isContainer: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -1278,27 +2735,8 @@ MonoBehaviour:
             Example\Assets\Scripts\Destruction\NetworkDestructible.cs
           projectPath: Assets\Scripts\Destruction\NetworkDestructible.cs
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Destruction\NetworkDestructible.cs.meta
-        label: NetworkDestructible.cs.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Destruction\NetworkDestructible.cs.meta
-          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-            Example\Assets\Scripts\Destruction\NetworkDestructible.cs.meta
-          projectPath: Assets\Scripts\Destruction\NetworkDestructible.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets\Scripts\PlayerControls
         label: PlayerControls
         level: 2
@@ -1336,9 +2774,9 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
-      - path: Packages
-        label: Packages
-        level: 0
+      - path: Assets\Scripts\Spawning
+        label: Spawning
+        level: 2
         isFolder: 1
         isContainer: 0
         isCollapsed: 0
@@ -1354,9 +2792,9 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Packages\manifest.json
-        label: manifest.json
-        level: 1
+      - path: Assets\Scripts\Spawning\CubeNetworked.cs
+        label: CubeNetworked.cs
+        level: 3
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -1366,126 +2804,13 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Packages\manifest.json
+          path: Assets\Scripts\Spawning\CubeNetworked.cs
           fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-            Example\Packages\manifest.json
-          projectPath: Packages\manifest.json
+            Example\Assets\Scripts\Spawning\CubeNetworked.cs
+          projectPath: Assets\Scripts\Spawning\CubeNetworked.cs
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
-      - path: Packages\packages-lock.json
-        label: packages-lock.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Packages\packages-lock.json
-          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-            Example\Packages\packages-lock.json
-          projectPath: Packages\packages-lock.json
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: ProjectSettings
-        label: ProjectSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: ProjectSettings\boot.config
-        label: boot.config
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\boot.config
-          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-            Example\ProjectSettings\boot.config
-          projectPath: ProjectSettings\boot.config
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings\MemorySettings.asset
-        label: MemorySettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\MemorySettings.asset
-          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-            Example\ProjectSettings\MemorySettings.asset
-          projectPath: ProjectSettings\MemorySettings.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings\ProjectVersion.txt
-        label: ProjectVersion.txt
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\ProjectVersion.txt
-          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-            Example\ProjectSettings\ProjectVersion.txt
-          projectPath: ProjectSettings\ProjectVersion.txt
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: ProjectSettings\SceneTemplateSettings.json
-        label: SceneTemplateSettings.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\SceneTemplateSettings.json
-          fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
-            Example\ProjectSettings\SceneTemplateSettings.json
-          projectPath: ProjectSettings\SceneTemplateSettings.json
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
       - path: UserSettings
         label: UserSettings
         level: 0
@@ -1539,8 +2864,8 @@ MonoBehaviour:
             Example\UserSettings\Layouts\default-2021.dwlt
           projectPath: UserSettings\Layouts\default-2021.dwlt
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
+          indexStatus: 0
+          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -1561,15 +2886,279 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
+    - path: Assets\ParrelSync.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync.meta
+      projectPath: Assets\ParrelSync.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\Examples.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\Examples.meta
+      projectPath: Assets\ParrelSync\Examples.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\Examples\CustomArgumentExample.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\Examples\CustomArgumentExample.cs
+      projectPath: Assets\ParrelSync\Examples\CustomArgumentExample.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\Examples\CustomArgumentExample.cs.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\Examples\CustomArgumentExample.cs.meta
+      projectPath: Assets\ParrelSync\Examples\CustomArgumentExample.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\LICENSE.md
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\LICENSE.md
+      projectPath: Assets\ParrelSync\LICENSE.md
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\LICENSE.md.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\LICENSE.md.meta
+      projectPath: Assets\ParrelSync\LICENSE.md.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync.meta
+      projectPath: Assets\ParrelSync\ParrelSync.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\AssetModBlock.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\EditorQuit.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\AssetModBlock\ParrelSyncAssetModificationProcessor.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\ClonesManager.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\ClonesManagerWindow.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\ExternalLinks.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\FileUtilities.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\NonCore.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\NonCore.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\NonCore.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\NonCore\AskFeedbackDialog.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\NonCore\OtherMenuItem.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\Preferences.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\Preferences.cs
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\Preferences.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\Preferences.cs.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\Preferences.cs.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\Preferences.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\Project.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\Project.cs
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\Project.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\Project.cs.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\Project.cs.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\Project.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\UpdateChecker.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs.meta
+      projectPath: Assets\ParrelSync\ParrelSync\Editor\ValidateCopiedFoldersIntegrity.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\package.json
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\package.json
+      projectPath: Assets\ParrelSync\ParrelSync\package.json
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\package.json.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\package.json.meta
+      projectPath: Assets\ParrelSync\ParrelSync\package.json.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\projectCloner.asmdef
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\projectCloner.asmdef
+      projectPath: Assets\ParrelSync\ParrelSync\projectCloner.asmdef
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\ParrelSync\projectCloner.asmdef.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\ParrelSync\projectCloner.asmdef.meta
+      projectPath: Assets\ParrelSync\ParrelSync\projectCloner.asmdef.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\README.md
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\README.md
+      projectPath: Assets\ParrelSync\README.md
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\README.md.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\README.md.meta
+      projectPath: Assets\ParrelSync\README.md.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\VERSION.txt
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\VERSION.txt
+      projectPath: Assets\ParrelSync\VERSION.txt
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\ParrelSync\VERSION.txt.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\ParrelSync\VERSION.txt.meta
+      projectPath: Assets\ParrelSync\VERSION.txt.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
     - path: Assets\PreFabs\DestructibleCube.prefab
       fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\PreFabs\DestructibleCube.prefab
       projectPath: Assets\PreFabs\DestructibleCube.prefab
       originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\PreFabs\Missile.prefab
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\PreFabs\Missile.prefab
+      projectPath: Assets\PreFabs\Missile.prefab
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\PreFabs\NetworkedDestructFragment.prefab
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\PreFabs\NetworkedDestructFragment.prefab
+      projectPath: Assets\PreFabs\NetworkedDestructFragment.prefab
+      originalPath: 
       indexStatus: 1
       workTreeStatus: 1
-    - path: Assets\PreFabs\DestructibleCube.prefab.meta
-      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\PreFabs\DestructibleCube.prefab.meta
-      projectPath: Assets\PreFabs\DestructibleCube.prefab.meta
+    - path: Assets\PreFabs\NetworkedDestructFragment.prefab.meta
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\PreFabs\NetworkedDestructFragment.prefab.meta
+      projectPath: Assets\PreFabs\NetworkedDestructFragment.prefab.meta
       originalPath: 
       indexStatus: 1
       workTreeStatus: 1
@@ -1579,129 +3168,63 @@ MonoBehaviour:
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Assets\Scripts\Destruction.meta
-      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\Scripts\Destruction.meta
-      projectPath: Assets\Scripts\Destruction.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
     - path: Assets\Scripts\Destruction\BasicDestructible.cs
       fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\Scripts\Destruction\BasicDestructible.cs
       projectPath: Assets\Scripts\Destruction\BasicDestructible.cs
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Destruction\BasicDestructible.cs.meta
-      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\Scripts\Destruction\BasicDestructible.cs.meta
-      projectPath: Assets\Scripts\Destruction\BasicDestructible.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
+      indexStatus: 0
+      workTreeStatus: 3
     - path: Assets\Scripts\Destruction\Destruct.cs
       fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\Scripts\Destruction\Destruct.cs
       projectPath: Assets\Scripts\Destruction\Destruct.cs
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Destruction\Destruct.cs.meta
-      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\Scripts\Destruction\Destruct.cs.meta
-      projectPath: Assets\Scripts\Destruction\Destruct.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
+      indexStatus: 0
+      workTreeStatus: 3
     - path: Assets\Scripts\Destruction\IDestructible.cs
       fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\Scripts\Destruction\IDestructible.cs
       projectPath: Assets\Scripts\Destruction\IDestructible.cs
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Destruction\IDestructible.cs.meta
-      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\Scripts\Destruction\IDestructible.cs.meta
-      projectPath: Assets\Scripts\Destruction\IDestructible.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
+      indexStatus: 0
+      workTreeStatus: 3
     - path: Assets\Scripts\Destruction\NetworkDestructFragment.cs
       fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\Scripts\Destruction\NetworkDestructFragment.cs
       projectPath: Assets\Scripts\Destruction\NetworkDestructFragment.cs
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Destruction\NetworkDestructFragment.cs.meta
-      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\Scripts\Destruction\NetworkDestructFragment.cs.meta
-      projectPath: Assets\Scripts\Destruction\NetworkDestructFragment.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
+      indexStatus: 0
+      workTreeStatus: 3
     - path: Assets\Scripts\Destruction\NetworkDestructible.cs
       fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\Scripts\Destruction\NetworkDestructible.cs
       projectPath: Assets\Scripts\Destruction\NetworkDestructible.cs
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Destruction\NetworkDestructible.cs.meta
-      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\Scripts\Destruction\NetworkDestructible.cs.meta
-      projectPath: Assets\Scripts\Destruction\NetworkDestructible.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
+      indexStatus: 0
+      workTreeStatus: 3
     - path: Assets\Scripts\PlayerControls\Missile.cs
       fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\Scripts\PlayerControls\Missile.cs
       projectPath: Assets\Scripts\PlayerControls\Missile.cs
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Packages\manifest.json
-      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Packages\manifest.json
-      projectPath: Packages\manifest.json
+    - path: Assets\Scripts\Spawning\CubeNetworked.cs
+      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Assets\Scripts\Spawning\CubeNetworked.cs
+      projectPath: Assets\Scripts\Spawning\CubeNetworked.cs
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Packages\packages-lock.json
-      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\Packages\packages-lock.json
-      projectPath: Packages\packages-lock.json
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: ProjectSettings\boot.config
-      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\ProjectSettings\boot.config
-      projectPath: ProjectSettings\boot.config
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings\MemorySettings.asset
-      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\ProjectSettings\MemorySettings.asset
-      projectPath: ProjectSettings\MemorySettings.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings\ProjectVersion.txt
-      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\ProjectSettings\ProjectVersion.txt
-      projectPath: ProjectSettings\ProjectVersion.txt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: ProjectSettings\SceneTemplateSettings.json
-      fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\ProjectSettings\SceneTemplateSettings.json
-      projectPath: ProjectSettings\SceneTemplateSettings.json
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
     - path: UserSettings\Layouts\default-2021.dwlt
       fullPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct Example\UserSettings\Layouts\default-2021.dwlt
       projectPath: UserSettings\Layouts\default-2021.dwlt
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    changedFilesText: 22 changed files
+      indexStatus: 0
+      workTreeStatus: 3
+    changedFilesText: 55 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2022-11-29T23:43:26.910+01:00
+      updatedTimeString: 2022-12-05T19:23:08.010+01:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2022-11-29T23:46:34.127+01:00
+      updatedTimeString: 2022-12-05T19:58:14.548+01:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2022-11-29T23:45:42.005+01:00
+      updatedTimeString: 2022-12-05T19:32:00.811+01:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -5042,10 +6565,10 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2022-11-29T23:46:14.269+01:00
+      updatedTimeString: 2022-11-29T23:58:02.085+01:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2022-11-29T23:57:23.220+01:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
@@ -8524,13 +10047,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2022-11-29T23:43:26.910+01:00
+    updatedTimeString: 2022-11-30T00:00:27.647+01:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 0001-01-01T00:00:00.000+00:00
+    updatedTimeString: 2022-11-30T00:52:04.414+01:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2022-11-29T23:46:34.127+01:00
+    updatedTimeString: 2022-12-05T19:58:14.548+01:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -8550,8 +10073,8 @@ MonoBehaviour:
     m_Tooltip: 
   repositoryProgressValue: 1
   repositoryProgressMessage: Listing changed files...
-  appManagerProgressValue: 0
-  appManagerProgressMessage: 
+  appManagerProgressValue: 1
+  appManagerProgressMessage: Initialized
   connections: []
   primaryConnectionUsername: 
 --- !u!114 &13
@@ -8574,10 +10097,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 766
-    width: 1464
-    height: 233
+    x: 1
+    y: 601
+    width: 653
+    height: 397
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -8595,23 +10118,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Destruction
+    - Assets/PreFabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Destruction
+  - Assets/PreFabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\grzet\Desktop\ZPI\Finalna Wersja DEV\Projekt\Destruct
     Example
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 315}
-    m_SelectedIDs: 025b0000
-    m_LastClickedID: 23298
-    m_ExpandedIDs: 000000003c4f00003e4f0000404f0000424f0000444f0000464f0000484f000000ca9a3b
+    scrollPos: {x: 0, y: 199}
+    m_SelectedIDs: 864f0000
+    m_LastClickedID: 20358
+    m_ExpandedIDs: 000000007a4f00007c4f00007e4f0000804f0000824f0000844f0000864f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -8639,7 +10162,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003c4f00003e4f0000404f0000424f0000444f0000464f0000484f0000
+    m_ExpandedIDs: 000000007a4f00007c4f00007e4f0000804f0000824f0000844f0000864f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -8664,10 +10187,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 404f0000
+    m_LastClickedInstanceID: 20288
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
+    m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -8715,9 +10238,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1465
+    x: 1451
     y: 73
-    width: 454
+    width: 468
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -8758,8 +10281,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 278
-    height: 672
+    width: 310
+    height: 504
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -8769,7 +10292,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 36fbffff5c4e0000
+      m_ExpandedIDs: 5c39ffff9c39ffff043bffff8640ffffc640ffff1041ffffa841ffffe841ffff5043ffff7c47ffffbc47ffff2449ffff864fffffc64fffff1050ffffe050ffff2051ffff9e52fffffe9fffff3ea0ffffa6a1ffff18b3ffff58b3ffffc0b4ffff2cc3ffff6cc3ffffd4c4ffffb2d1fffff2d1ffff5ad3ffffd0dbffff10dcffff78ddffff62dfffffa2dfffffecdfffff8ce0ffffcce0ffff34e2ffff36fbffffe4930000f6a100003ea20000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -8813,10 +10336,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 279
-    y: 73
-    width: 1184
-    height: 672
+    x: 141
+    y: 81
+    width: 512
+    height: 499
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -8892,9 +10415,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 67.5, y: 86}
+      snapOffset: {x: 67.5, y: -123}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 2
       id: Orientation
       index: 0
       layout: 4
@@ -9051,9 +10574,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.25016117, y: -11.6973095, z: 0.78759575}
+    m_Target: {x: 20.20789, y: -25.218433, z: 30.321795}
     speed: 2
-    m_Value: {x: 0.25016117, y: -11.6973095, z: 0.78759575}
+    m_Value: {x: 20.20789, y: -25.218433, z: 30.321795}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -9100,13 +10623,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.059112787, y: 0.93736076, z: -0.28105795, w: 0.19714798}
+    m_Target: {x: 0.24454062, y: 0.60772717, z: -0.20430534, w: 0.7274116}
     speed: 2
-    m_Value: {x: 0.05911278, y: 0.93736064, z: -0.28105792, w: 0.19714795}
+    m_Value: {x: 0.24454053, y: 0.60772693, z: -0.20430526, w: 0.7274114}
   m_Size:
-    m_Target: 22.209541
+    m_Target: 34.9909
     speed: 2
-    m_Value: 22.209541
+    m_Value: 34.9909
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -9151,10 +10674,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 279
+    x: 311
     y: 73
-    width: 1184
-    height: 672
+    width: 1138
+    height: 504
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -9165,7 +10688,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1184, y: 651}
+  m_TargetSize: {x: 1138, y: 483}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -9180,10 +10703,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -592
-    m_HBaseRangeMax: 592
-    m_VBaseRangeMin: -325.5
-    m_VBaseRangeMax: 325.5
+    m_HBaseRangeMin: -569
+    m_HBaseRangeMax: 569
+    m_VBaseRangeMin: -241.5
+    m_VBaseRangeMax: 241.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -9201,23 +10724,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1184
-      height: 651
+      width: 1138
+      height: 483
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 592, y: 325.5}
+    m_Translation: {x: 569, y: 241.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -592
-      y: -325.5
-      width: 1184
-      height: 651
+      x: -569
+      y: -241.5
+      width: 1138
+      height: 483
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1184, y: 672}
+  m_LastWindowPixelSize: {x: 1138, y: 504}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -9244,9 +10767,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 766
-    width: 1464
-    height: 233
+    y: 598
+    width: 1450
+    height: 401
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

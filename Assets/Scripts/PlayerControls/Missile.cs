@@ -9,6 +9,8 @@ public class Missile : NetworkBehaviour
     [Networked]
     private TickTimer life { get; set; }
 
+    public float explosionradius = 3;
+
     
     public void Init(Vector3 aimVector)
     {
@@ -37,14 +39,31 @@ public class Missile : NetworkBehaviour
             if(collision.gameObject.GetComponent<IDestructible>() != null)
             {
                 NetworkDestructible ob = collision.gameObject.GetComponent<NetworkDestructible>();
-                ob.hitPosition = this.transform.position;
+                //ob.hitPosition = this.transform.position;
+                //ob.destructionRadius = explosionradius;
 
-                ob.OnDestruction();
+                if (!ob.isReadyToDestruct)
+                {
+                    Debug.Log("changed bool");
+                    Debug.Log("SENT RPC");
+                    //ob.RPC_ExecuteDestructOnClient();
+                    //ob.isReadyToDestruct = true;
 
+                    int explosionSeed = Random.Range(0, 10000);
+                    ob.RPC_SendInfoAboutDestruction(this.transform.position, explosionSeed);
+
+
+                    
+                }
+
+
+                //ob.OnDestruction(explosionradius);
+
+                
 
                 Debug.Log("Hit destructible network object");
 
-
+                Runner.Despawn(Object);
 
 
             }

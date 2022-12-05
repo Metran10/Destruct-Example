@@ -132,7 +132,7 @@ namespace Destruct
 
     public static class Static
     {
-        public static readonly Vector3[] cubeNormals = { Vector3.up, Vector3.down, Vector3.right, Vector3.left, Vector3.forward, Vector3.back };
+        public static readonly Vector3[] cube = { Vector3.up, Vector3.down, Vector3.right, Vector3.left, Vector3.forward, Vector3.back };
         public static readonly Vector3[] regularDodecahedron = {
             Vector3.down,
             Quaternion.Euler(116.56505f, 0f     , 0f) * Vector3.down,
@@ -148,7 +148,7 @@ namespace Destruct
             Quaternion.Euler(116.56505f, 72f*4  , 0f) * Vector3.up,
         };
 
-        public static void Destruct(IDestructible script, Vector3 origin, float size)
+        public static void Destruct(IDestructible script, Vector3 origin, float size, int granularity)
         {
             script.PreDestruct();
             MeshFilter mFilter = script.GetMeshFilter();
@@ -157,26 +157,51 @@ namespace Destruct
             List<Vector2> u = new();
             mFilter.mesh.GetVertices(v);
             mFilter.mesh.GetTriangles(t, 0);
+            Vector3 s = mFilter.transform.localScale;
 
-            var cut = CutOutShape(v, t, new Pose(origin, Quaternion.identity), size, Static.regularDodecahedron);
+            origin = new Vector3(origin.x * s.x, origin.y * s.y, origin.z * s.z);
 
-            List<SplitResult> result = Fracture(cut.Item2.vertices, cut.Item2.triangles, new Bounds(origin, Vector3.one * size / 2f));
+            for (int i = 0; i < v.Count; i++)
+            {
+                v[i] = new Vector3(v[i].x * s.x, v[i].y * s.y, v[i].z * s.z);
+            }
+
+            (SplitResult, SplitResult) cut;
+            Bounds bounds = new Bounds(origin, Vector3.one * size / 2f);
+
+            if (float.IsFinite(size))
+            {
+                cut = CutOutShape(v, t, new Pose(origin, Quaternion.identity), size, Static.cube);
+            }
+            else
+            {
+                cut = new(new SplitResult(new(), new()), new SplitResult(v, t));
+                bounds = mFilter.mesh.bounds;
+            }
+
+            List<SplitResult> result = Fracture(cut.Item2.vertices, cut.Item2.triangles, bounds, granularity);
+
 
             RemoveLooseVertices(ref cut.Item1.vertices, ref cut.Item1.triangles);
             RemoveLooseVertices(ref result);
 
-            List<GameObject> objects = InstantiateObjectsFromSplitResults(result, new Pose(mFilter.transform.position, mFilter.transform.rotation), mFilter.GetComponent<MeshRenderer>().material);
+            for (int i = 0; i < cut.Item1.vertices.Count; i++)
+            {
+                cut.Item1.vertices[i] = new Vector3(cut.Item1.vertices[i].x / s.x, cut.Item1.vertices[i].y / s.y, cut.Item1.vertices[i].z / s.z);
+            }
 
-            script.PostDestruct((cut.Item1, objects));
+            // List<GameObject> objects = InstantiateObjectsFromSplitResults(result, mFilter.transform.position, mFilter.transform.rotation, mFilter.GetComponent<MeshRenderer>().material);
+
+            script.PostDestruct((cut.Item1, result));
         }
 
-        public static List<SplitResult> Fracture(List<Vector3> vertices, List<int> triangles, Bounds bounds)
+        public static List<SplitResult> Fracture(List<Vector3> vertices, List<int> triangles, Bounds bounds, int granularity)
         {
             List<SplitResult> result = new();
             result.Add(new SplitResult(vertices, triangles));
 
             List<Plane> planes = new();
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < granularity; i++)
             {
                 planes.Add(
                     new Plane(Random.onUnitSphere,
@@ -226,7 +251,8 @@ namespace Destruct
             return (notCube, cube);
         }
 
-        public static (SplitResult, SplitResult) SplitMeshAlongPlane(List<Vector3> vertices, List<int> triangles, Plane plane, bool fill = true) // 1st mesh is above plane
+        public static (SplitResult, SplitResult) SplitMeshAlongPlane(List<Vector3> vertices, List<int> triangles, Plane plane, bool fill = true)
+        // 1st SplitResult is above plane
         {
             (SplitResult, SplitResult) result = (new(vertices), new(vertices));
             (Dictionary<int, int>, Dictionary<int, int>) adjacentVertices = (new(vertices.Count), new(vertices.Count));
@@ -402,12 +428,12 @@ namespace Destruct
             return result;
         }
 
-        public static List<GameObject> InstantiateObjectsFromSplitResults(List<SplitResult> results, Pose pose, Material mat, bool withRigidBody = true)
+        public static List<GameObject> InstantiateObjectsFromSplitResults(List<SplitResult> results, Vector3 position, Quaternion rotation, Material mat, bool withRigidBody = true)
         {
             List<GameObject> newObjects = new(results.Count);
             foreach (SplitResult res in results)
             {
-                var obj = CreateGameObjectFromMeshData("Fragment", pose, res.vertices, res.triangles, mat);
+                var obj = CreateGameObjectFromMeshData("Fragment", position, rotation, res.vertices, res.triangles, mat);
                 if (withRigidBody)
                 {
                     var col = obj.AddComponent<MeshCollider>();
@@ -627,7 +653,7 @@ namespace Destruct
 #endif
                     }
                 }
-                else if (Mathf.Approximately(crossZ, 0f))
+                else if (crossZ > -1e8)
                 {
                     loop.RemoveLink(index);
 #if DEBUG
@@ -640,7 +666,7 @@ namespace Destruct
                 {
                     notRemovedCounter++;
                 }
-                if (notRemovedCounter > loop.forwardLinks.Count)
+                if (notRemovedCounter > loop.forwardLinks.Count + 1)
                 {
                     throw new Exception();
                 }
@@ -652,13 +678,13 @@ namespace Destruct
             return result;
         }
 
-        public static GameObject CreateGameObjectFromMeshData(string name, Pose pose, List<Vector3> vertices, List<int> triangles, Material mat)
+        public static GameObject CreateGameObjectFromMeshData(string name, Vector3 position, Quaternion rotation, List<Vector3> vertices, List<int> triangles, Material mat)
         {
 
             GameObject obj = new GameObject(name);
 
-            obj.transform.position = pose.position;
-            obj.transform.rotation = pose.rotation;
+            obj.transform.position = position;
+            obj.transform.rotation = rotation;
 
             MeshFilter mFilter = obj.AddComponent<MeshFilter>();
             mFilter.mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
