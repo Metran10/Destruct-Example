@@ -115,10 +115,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  _isReadyToDestruct: 0
-  _isDestructed: 0
+  _isReadyToDestruct:
+    _value: 0
+  _isDestructed:
+    _value: 0
   destructElemPF: {fileID: 5538746316523295169, guid: 45d0357407827084894efd8dd248ac13, type: 3}
-  hitPosition: {x: 0, y: 0, z: 0}
+  granularity: 6
+  _hitPosition: {x: 0, y: 0, z: 0}
+  _destructionRadius: 0
+  childrenObjects: []
   _seed: 0
   choosenSeed: 1000
 --- !u!114 &1102161104237667128

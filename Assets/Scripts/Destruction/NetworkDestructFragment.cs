@@ -24,7 +24,7 @@ public class NetworkDestructFragment : NetworkBehaviour
     NetworkDestructible destructParent;
 
 
-    public float life = 1000f;//60.0f;
+    public float life = 10.0f;//60.0f;
 
     [Networked]
     public NetworkId parentID { get; set; }

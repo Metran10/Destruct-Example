@@ -11,6 +11,8 @@ public class Missile : NetworkBehaviour
 
     public float explosionradius = 3;
 
+    [SerializeField]
+    public int granulation = 6;
     
     public void Init(Vector3 aimVector)
     {
@@ -50,7 +52,7 @@ public class Missile : NetworkBehaviour
                     //ob.isReadyToDestruct = true;
 
                     int explosionSeed = Random.Range(0, 10000);
-                    ob.RPC_SendInfoAboutDestruction(this.transform.position, explosionSeed);
+                    ob.RPC_SendInfoAboutDestruction(this.transform.position, explosionSeed, granulation);
 
 
                     

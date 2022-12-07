@@ -76,7 +76,7 @@ public class MainSpawner : MonoBehaviour ,INetworkRunnerCallbacks
     {
         if (runner.IsServer)
         {
-            NetworkObject playerChar = runner.Spawn(playerPF, Utils.GetNewSpawnPoint(50,50), Quaternion.identity, player);
+            NetworkObject playerChar = runner.Spawn(playerPF, Utils.GetNewSpawnPoint(20,20), Quaternion.identity, player);
 
             _spawnedPlayers.Add(player, playerChar);
 

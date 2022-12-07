@@ -135,7 +135,7 @@ public class PlayerMovementController : NetworkBehaviour
         mesh.triangles = trianagles;
         //mesh.normals = normals;
         //mesh.uv = UV;
-        mesh.Optimize();
+        
         mesh.RecalculateNormals();
 
 

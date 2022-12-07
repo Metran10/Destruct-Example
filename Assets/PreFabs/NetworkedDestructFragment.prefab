@@ -151,5 +151,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   _ChildID: 0
-  _readyToInitialize: 0
-  life: 60
+  _readyToInitialize:
+    _value: 0
+  life: 20

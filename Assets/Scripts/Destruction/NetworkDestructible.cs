@@ -16,7 +16,8 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
 
 
     public NetworkObject destructElemPF;
-    public int granularity = 3;
+
+    public int granularity = 6;
 
 
     [Networked]
@@ -57,6 +58,14 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
         childrenSplits = new List<SplitResult>();
     }
 
+    public override void Spawned()
+    {   
+        //if(granularity == 0)
+        //{
+        //    granularity = 3;
+        //}
+    }
+
     public MeshFilter GetMeshFilter()
     {
         return mFilter;
@@ -72,10 +81,10 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
     {
         transform.localScale = Vector3.one;
         Debug.Log("Started post destruction");
-        
 
-        
 
+
+        Debug.Log($"GRANULARITY: {granularity}");
 
         if (Object.HasStateAuthority)
         {
@@ -108,6 +117,8 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
                         o.GetComponent<NetworkDestructFragment>().parentID = Object.Id;
 
                         o.gameObject.transform.parent = this.gameObject.transform;
+
+                        //o.AddBehaviour<NetworkDestructible>();
                     }
                 }
 
@@ -243,11 +254,14 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
 
         MeshFilter mf = ob.GetComponent<MeshFilter>();
         MeshCollider mc = ob.GetComponent<MeshCollider>();
+        MeshRenderer mr = ob.GetComponent<MeshRenderer>();
         mf.mesh.SetVertices(split.vertices);
         mf.mesh.SetTriangles(split.triangles, 0);
         mf.mesh.Optimize();
         mf.mesh.RecalculateNormals();
         mf.mesh.RecalculateBounds();
+
+        mr.material = parent.GetComponent<MeshRenderer>().material;
 
         mc.convex = true;
 
@@ -274,13 +288,13 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
 
 
     [Rpc(sources: RpcSources.All, targets: RpcTargets.StateAuthority)]
-    public void RPC_SendInfoAboutDestruction(Vector3 explosionPosition, int explosionSeed)
+    public void RPC_SendInfoAboutDestruction(Vector3 explosionPosition, int explosionSeed, int granulation)
     {
-        Debug.Log($"Server received info about explosion pos:{explosionPosition}, seed {explosionSeed}");
+        Debug.Log($"Server received info about explosion pos:{explosionPosition}, seed {explosionSeed}, granularity: {granularity}");
         //seed = explosionSeed;
         isReadyToDestruct = true;
         hitPosition = explosionPosition;
-
+        //granularity = granulation;
     }
 
     [Rpc(sources: RpcSources.All, targets: RpcTargets.Proxies)]
