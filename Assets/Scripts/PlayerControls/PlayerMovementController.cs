@@ -9,6 +9,7 @@ public class PlayerMovementController : NetworkBehaviour
     NetworkCharacterControllerPrototypeCustomized charController;
     public Transform firepoint;
     public Missile missilePF;
+    public Missile strongMissilePF;
     public NetworkObject cubePF;
 
     [Networked]
@@ -76,7 +77,16 @@ public class PlayerMovementController : NetworkBehaviour
                     Runner.Spawn(missilePF, firepoint.position, Quaternion.Euler(missRot.eulerAngles.x,missRot.y,missRot.z - 90), Object.InputAuthority,
                         (runner, o) => { o.GetComponent<Missile>().Init(10 * playerCam.transform.forward); });
                 }
+                else if (data.isFiringStrong)
+                {
+                    missileCD = TickTimer.CreateFromSeconds(Runner, 0.5f);
+                    Runner.Spawn(strongMissilePF, firepoint.position, Quaternion.Euler(missRot.eulerAngles.x, missRot.y, missRot.z - 90), Object.InputAuthority,
+                        (runner, o) => { o.GetComponent<Missile>().Init(10 * playerCam.transform.forward); });
+                }
             }
+
+
+
 
 
             if (cubeSpawnCD.ExpiredOrNotRunning(Runner))

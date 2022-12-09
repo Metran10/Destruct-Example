@@ -9,6 +9,7 @@ public struct NetworkInputData : INetworkInput
     public NetworkBool isJumping;
     public float horizontalRotation;
     public NetworkBool isFiring;
+    public NetworkBool isFiringStrong;
 
 
     public NetworkBool isSpawningCube;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fusion;
 using Destruct;
+using TMPro;
 
 public class NetworkDestructible : NetworkBehaviour, IDestructible
 {   
@@ -12,8 +13,8 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
     [Networked]
     public NetworkBool isDestructed { get; set; }
 
-
-
+    [SerializeField]
+    public TextMeshProUGUI statText;
 
     public NetworkObject destructElemPF;
 
@@ -40,7 +41,7 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
 
     public int choosenSeed = 1000;
 
-
+    public int explosionStrenght = 1;
 
     public List<SplitResult> childrenSplits;
 
@@ -60,10 +61,7 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
 
     public override void Spawned()
     {   
-        //if(granularity == 0)
-        //{
-        //    granularity = 3;
-        //}
+        
     }
 
     public MeshFilter GetMeshFilter()
@@ -73,7 +71,7 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
 
     public void PreDestruct()
     {
-        Random.InitState(choosenSeed);
+        Random.InitState(seed);
         destructionCD = TickTimer.CreateFromSeconds(Runner, 1f);
     }
 
@@ -122,7 +120,7 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
                     }
                 }
 
-                RPC_destructOnClient();
+                RPC_destructOnClient(explosionStrenght, seed);
                 isLocallyDest = true;
             }
         }
@@ -132,7 +130,7 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
             {
                 childrenSplits = destructionResults.Item2;
 
-                //strona kliencka
+                //client side
                 Debug.Log("Post destruct on CLIENT");
 
                 Debug.Log($"Split count on CLIENT: {childrenSplits.Count}");
@@ -217,17 +215,17 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
 
     public void DestroyObject()
     {
-        if (!Object.HasStateAuthority)
-        {
-            Debug.Log("KLIENT Destroy ");
-        }
-        else
-        {
-            Debug.Log("Server destroy");
-        }
+        
+        Debug.Log($"Destroy with gran: {granularity} * {explosionStrenght}");
 
-        Static.Destruct(this, transform.InverseTransformPoint(hitPosition), float.PositiveInfinity, granularity);
+        var tmpTime = Time.realtimeSinceStartup;
 
+        Static.Destruct(this, transform.InverseTransformPoint(hitPosition), float.PositiveInfinity, granularity * explosionStrenght);
+
+        //Debug.Log($"Destruct executed in {Time.realtimeSinceStartup - tmpTime}");
+        //Debug.Log($"Object splitted into {childrenSplits.Count}");
+        if(statText != null)
+            statText.text = $"Object destoyed in \n{Time.realtimeSinceStartup - tmpTime}\n {childrenSplits.Count} fragments\n strenght: {granularity * explosionStrenght}";
     }
 
 
@@ -265,42 +263,34 @@ public class NetworkDestructible : NetworkBehaviour, IDestructible
 
         mc.convex = true;
 
-
-
-        //ob.GetComponent<Rigidbody>().isKinematic = true;
-        //Debug.Log("Added components");
     }
 
-    [Rpc(sources: RpcSources.All, targets: RpcTargets.All)]
-    public void RPC_ExecuteDestructOnClient()
-    {
-        if (!Object.HasStateAuthority)
-        {
-            Debug.Log("Client received rpc from server");
-        }
-        else
-        {
-            Debug.Log("Server received rpc from server");
-        }
-
-
-    }
+    
 
 
     [Rpc(sources: RpcSources.All, targets: RpcTargets.StateAuthority)]
-    public void RPC_SendInfoAboutDestruction(Vector3 explosionPosition, int explosionSeed, int granulation)
+    public void RPC_SendInfoAboutDestruction(Vector3 explosionPosition, int explosionSeed, int explosionStrenght)
     {
-        Debug.Log($"Server received info about explosion pos:{explosionPosition}, seed {explosionSeed}, granularity: {granularity}");
+        Debug.Log($"Server received info about explosion pos:{explosionPosition}, seed {explosionSeed}, explosion strenght: {explosionStrenght}");
         //seed = explosionSeed;
-        isReadyToDestruct = true;
         hitPosition = explosionPosition;
+        this.explosionStrenght = explosionStrenght;
+        seed = explosionSeed;
+        //Random.InitState(seed);
+        isReadyToDestruct = true;
+
+        
+        
         //granularity = granulation;
     }
 
     [Rpc(sources: RpcSources.All, targets: RpcTargets.Proxies)]
-    public void RPC_destructOnClient()
+    public void RPC_destructOnClient(int explosionStrenght, int destructSeed)
     {
         Debug.Log("RPC request destruct on clients");
+        this.explosionStrenght = explosionStrenght;
+        seed = destructSeed;
+        //Random.InitState(seed);
 
         DestroyObject();
 

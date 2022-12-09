@@ -27049,6 +27049,7 @@ MonoBehaviour:
   _interpolationDataSource: 0
   firepoint: {fileID: 2310607796871991767}
   missilePF: {fileID: 7151493424533394987, guid: 050c37dd505b28c409eaddfc4dfaf0ee, type: 3}
+  strongMissilePF: {fileID: 1859972252161116703, guid: 41ad3ad8d157acf44b8ce7f5bb03f162, type: 3}
   cubePF: {fileID: 3133796600803422872, guid: 54322c4f092d7d84b8c955bf4431561f, type: 3}
 --- !u!1 &4519104977397309664
 GameObject:

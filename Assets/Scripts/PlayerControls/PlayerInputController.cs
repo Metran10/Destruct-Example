@@ -8,6 +8,7 @@ public class PlayerInputController : MonoBehaviour
     Vector2 viewInput = Vector2.zero;
     bool isJumping = false;
     bool isFiring = false;
+    bool isFiringStrong = false;
     bool isSpawningCube = false;
 
 
@@ -40,8 +41,14 @@ public class PlayerInputController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             isFiring = true;
-            //Debug.Log("Is firiiing");
         }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            isFiringStrong = true;
+        }
+
+        
 
         viewInput.x = Input.GetAxis("Mouse X");
         viewInput.y = -1 * Input.GetAxis("Mouse Y");
@@ -67,10 +74,12 @@ public class PlayerInputController : MonoBehaviour
         data.isJumping = isJumping;
         data.isFiring = isFiring;
         data.isSpawningCube = isSpawningCube;
+        data.isFiringStrong = isFiringStrong;
 
         isSpawningCube = false;
         isJumping = false;
         isFiring = false;
+        isFiringStrong = false;
 
         return data;
     }

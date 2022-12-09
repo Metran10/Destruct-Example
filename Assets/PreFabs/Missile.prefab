@@ -118,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   explosionradius: 5
-  granulation: 3
+  granulationStrenght: 1
 --- !u!135 &4726165108538841777
 SphereCollider:
   m_ObjectHideFlags: 0

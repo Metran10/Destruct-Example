@@ -12,7 +12,7 @@ public class Missile : NetworkBehaviour
     public float explosionradius = 3;
 
     [SerializeField]
-    public int granulation = 6;
+    public int granulationStrenght = 2;
     
     public void Init(Vector3 aimVector)
     {
@@ -41,18 +41,15 @@ public class Missile : NetworkBehaviour
             if(collision.gameObject.GetComponent<IDestructible>() != null)
             {
                 NetworkDestructible ob = collision.gameObject.GetComponent<NetworkDestructible>();
-                //ob.hitPosition = this.transform.position;
-                //ob.destructionRadius = explosionradius;
 
                 if (!ob.isReadyToDestruct)
                 {
-                    Debug.Log("changed bool");
+                    
                     Debug.Log("SENT RPC");
-                    //ob.RPC_ExecuteDestructOnClient();
-                    //ob.isReadyToDestruct = true;
+                    
 
                     int explosionSeed = Random.Range(0, 10000);
-                    ob.RPC_SendInfoAboutDestruction(this.transform.position, explosionSeed, granulation);
+                    ob.RPC_SendInfoAboutDestruction(this.transform.position, explosionSeed, granulationStrenght);
 
 
                     
