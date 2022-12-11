@@ -20,33 +20,20 @@ public class PlayerMovementController : NetworkBehaviour
 
     Vector2 viewInput;
     float verticalCameraRotation = 0;
-    //flaot vertical
-
-    
 
     private void Awake()
     {
         charController = GetComponent<NetworkCharacterControllerPrototypeCustomized>();
         playerCam = GetComponentInChildren<Camera>();
-
-        
-
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         verticalCameraRotation += viewInput.y * Time.deltaTime * charController.verticalViewSpeed;
         verticalCameraRotation = Mathf.Clamp(verticalCameraRotation, -90, 90);
 
         playerCam.transform.localRotation = Quaternion.Euler(verticalCameraRotation, 0, 0);
-
     }
 
 
@@ -85,10 +72,6 @@ public class PlayerMovementController : NetworkBehaviour
                 }
             }
 
-
-
-
-
             if (cubeSpawnCD.ExpiredOrNotRunning(Runner))
             {
                 if (data.isSpawningCube)
@@ -96,17 +79,11 @@ public class PlayerMovementController : NetworkBehaviour
                     cubeSpawnCD = TickTimer.CreateFromSeconds(Runner, 0.5f);
                     NetworkObject cube = Runner.Spawn(cubePF, Object.transform.position + transform.forward * 6, Object.transform.rotation, Object.InputAuthority,
                         (runner, o) => { PrepareObjectCubeTest(o); });
-                    //(runner, o) => { PrepareObjectCubeTest(o); }
-                    //cube.GetComponent<CubeNetworked>().isInitialized = true;
-
                 }
 
             }
 
         }
-
-
-
 
     }
 
@@ -143,8 +120,6 @@ public class PlayerMovementController : NetworkBehaviour
         ob.GetComponent<MeshFilter>().mesh = mesh;
         mesh.vertices = vertices;
         mesh.triangles = trianagles;
-        //mesh.normals = normals;
-        //mesh.uv = UV;
         
         mesh.RecalculateNormals();
 
@@ -153,8 +128,6 @@ public class PlayerMovementController : NetworkBehaviour
         ob.gameObject.AddComponent<NetworkRigidbody>();
 
         ob.gameObject.AddComponent<BoxCollider>();
-
-        //ob.GetComponent<NetworkRigidbody>().InterpolationTarget = 
     }
 
 

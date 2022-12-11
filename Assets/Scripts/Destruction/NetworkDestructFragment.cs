@@ -23,8 +23,8 @@ public class NetworkDestructFragment : NetworkBehaviour
 
     NetworkDestructible destructParent;
 
-
-    public float life = 10.0f;//60.0f;
+    [SerializeField]
+    public float life = 30.0f;
 
     [Networked]
     public NetworkId parentID { get; set; }
@@ -40,28 +40,18 @@ public class NetworkDestructFragment : NetworkBehaviour
                 Runner.TryFindObject(parentID, out parent);
                 this.transform.parent = parent.gameObject.transform;
 
-
                 destructParent = this.transform.parent.GetComponent<NetworkDestructible>();
             }
-            
         }
 
         if (lifeTime.ExpiredOrNotRunning(Runner))
         {
             Runner.Despawn(Object);
         }
-
-        //if (timeToInitialize.Expired(Runner))
-        //{
-        //    readyToInitialize = true;
-        //}
-
     }
 
     public static void OnIDSet(Changed<NetworkDestructFragment> changed)
     {
-        //Debug.Log($"Current id: {changed.Behaviour.ChildID}");
-
         changed.Behaviour.readyToInitialize = true;
     }
 
@@ -69,7 +59,6 @@ public class NetworkDestructFragment : NetworkBehaviour
 
     public override void Spawned()
     {
-
         lifeTime = TickTimer.CreateFromSeconds(Runner, life);
         timeToInitialize = TickTimer.CreateFromTicks(Runner, 10);
 
@@ -81,13 +70,9 @@ public class NetworkDestructFragment : NetworkBehaviour
                 Runner.TryFindObject(parentID, out parent);
                 this.transform.parent = parent.gameObject.transform;
 
-
                 destructParent = this.transform.parent.GetComponent<NetworkDestructible>();
             }
-
         }
-
-
     }
 
     public static void InitializeFragment(Changed<NetworkDestructFragment> changed)
@@ -95,41 +80,25 @@ public class NetworkDestructFragment : NetworkBehaviour
         bool isReadyNow = changed.Behaviour.readyToInitialize;
         changed.LoadOld();
 
-
         bool isReadyOld = changed.Behaviour.readyToInitialize;
-
 
         if(isReadyNow && !isReadyOld)
         {
             changed.Behaviour.InitializeFragmentMesh();
         }
-
-
-
     }
 
     public void InitializeFragmentMesh()
     {
-        //this.gameObject.AddComponent<MeshCollider>();
-        if (!Object.HasStateAuthority)
-        {
-            return;
-            //Debug.Log("KLIENT");
-            //Debug.Log($"parentID: {parentID}, wielkosc listy {destructParent.childrenSplits.Count}");
-        }
-
-        //############ no tutaj cos nie dziala przez losowosc
-
-        SplitResult res = destructParent.childrenSplits[ChildID];
-        //Debug.Log("Inicjalizacja meshu");
-        //Debug.Log($"ID: {ChildID}|  vertices: {res.vertices.Count} | triangles: {res.triangles.Count}");
         
-
+        if (!Object.HasStateAuthority)
+            return;
+        
+        SplitResult res = destructParent.childrenSplits[ChildID];
 
         MeshFilter mf = this.GetComponent<MeshFilter>();
         MeshRenderer mr = this.GetComponent<MeshRenderer>();
         MeshCollider mc = this.GetComponent<MeshCollider>();
-
 
         Mesh newMesh = new Mesh();
         newMesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
@@ -140,14 +109,6 @@ public class NetworkDestructFragment : NetworkBehaviour
         newMesh.RecalculateBounds();
 
         mf.mesh = newMesh;
-
-        //mf.mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
-
-        //mf.mesh.SetVertices(res.vertices);
-        //mf.mesh.SetTriangles(res.triangles, 0);
-        //mf.mesh.MarkDynamic();
-        //mf.mesh.RecalculateNormals();
-        //mf.mesh.RecalculateBounds();
 
         mr.material = destructParent.gameObject.GetComponent<MeshRenderer>().material;
 
@@ -161,8 +122,6 @@ public class NetworkDestructFragment : NetworkBehaviour
 
     public void initializeOnClient()
     {
-        Debug.Log("Initializing fragment mesh on CLIENT");
-
         transform.localScale = Vector3.one;
 
         if (Object.HasStateAuthority)

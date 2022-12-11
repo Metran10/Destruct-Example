@@ -9,8 +9,6 @@ public class Missile : NetworkBehaviour
     [Networked]
     private TickTimer life { get; set; }
 
-    public float explosionradius = 3;
-
     [SerializeField]
     public int granulationStrenght = 2;
     
@@ -33,10 +31,7 @@ public class Missile : NetworkBehaviour
     {
         if (!hit)
         {
-            //Debug.Log("HIT");
             hit = true;
-
-
 
             if(collision.gameObject.GetComponent<IDestructible>() != null)
             {
@@ -44,31 +39,13 @@ public class Missile : NetworkBehaviour
 
                 if (!ob.isReadyToDestruct)
                 {
-                    
-                    Debug.Log("SENT RPC");
-                    
-
                     int explosionSeed = Random.Range(0, 10000);
                     ob.RPC_SendInfoAboutDestruction(this.transform.position, explosionSeed, granulationStrenght);
-
-
-                    
                 }
-
-
-                //ob.OnDestruction(explosionradius);
-
-                
-
-                Debug.Log("Hit destructible network object");
-
                 Runner.Despawn(Object);
-
-
             }
-
+            Runner.Despawn(Object);
         }
-        
     }
 
 

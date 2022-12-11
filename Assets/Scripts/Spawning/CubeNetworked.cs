@@ -24,16 +24,7 @@ public class CubeNetworked : NetworkBehaviour
 
     public override void Spawned()
     {
-        if (Object.StateAuthority)
-        {
-            //Debug.Log("Spawned executed on server");
-        }
-        else
-        {
-            //Debug.Log("Spawned executed on client");
-        }
         lifetime = TickTimer.CreateFromSeconds(Runner, 20.0f);
-
 
         isInitialized = false;
 
@@ -44,7 +35,6 @@ public class CubeNetworked : NetworkBehaviour
 
     public static void OnInitializeCube(Changed<CubeNetworked> changed)
     {
-        Debug.Log("On cube initialize   (on changeee)");
         bool isInitializedCurrently = changed.Behaviour.isInitialized;
 
         changed.LoadOld();
@@ -54,17 +44,11 @@ public class CubeNetworked : NetworkBehaviour
         {
             changed.Behaviour.initializeMesh();
         }
-
-
-        //initializeMesh();
-
     }
 
     private void initializeMesh()
-    {
-        
+    { 
         meshFilter = this.GetComponent<MeshFilter>();
-        Debug.Log("Spawning cube spawneeed");
 
         Vector3[] vertices = new Vector3[] {new Vector3(0,0,0),new Vector3(2,0,0),
             new Vector3(2,2,0), new Vector3(0,2,0),
@@ -94,25 +78,7 @@ public class CubeNetworked : NetworkBehaviour
         mesh.RecalculateNormals();
 
         meshFilter.mesh = mesh;
-
-        //gameObject.AddComponent<Rigidbody>();
-        //gameObject.AddComponent<NetworkRigidbody>();
-        //gameObject.AddComponent<BoxCollider>();
-
-        if (Runner.IsServer)
-        {
-            Debug.Log("initializeMesh executed on server");
-        }
-        else
-        {
-            Debug.Log("initializeMesh executed on client");
-        }
-        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-       
-        //Debug.Log($"Obiekt: {Object.transform.position}");
-        //Debug.Log($"meshFilter: {meshFilter.transform.position}");
-        //Debug.Log($"meshRenderer: {meshRenderer.transform.position}");
-
+        
         GetComponent<NetworkTransform>().InterpolationTarget = this.transform;
 
         
